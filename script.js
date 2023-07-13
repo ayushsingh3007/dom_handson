@@ -18,7 +18,7 @@ if(guessnumber>randomnumber){
 
 else if(guessnumber<randomnumber){
 	document.querySelector('.message').textContent="Your guess is low"
-		document.querySelector(".chancenumber").textContent=`chances:${--chancesvalue}`
+		document.querySelector(".chancenumber").textContent=--chancesvalue
 
 }
 
