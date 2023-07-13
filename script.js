@@ -54,7 +54,23 @@ document.querySelector('.message').textContent="Start Gueesing"
 document.querySelector('.number_box').style.visibility='visible'
 document.querySelector(".chancenumber").textContent=`${Intialvalue}`
 document.querySelector('.assignscore').textContent=`${highscoring}`
+document.getElementById('input').value="";
   }
+
+
+
+
+
+
+
+
+
+
+// this is for index1 file 
+
+
+
+
 
 document.querySelector('#changing').innerText='Hello World'
 
