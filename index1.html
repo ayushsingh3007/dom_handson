@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="./style.css">
+	<title></title>
+</head>
+<body>
+<h1>Que- Write the code to access element which is having id as "text"?</h1>
+<p>ans- This can be done by targeting element by id.like as- 
+    <h1 class="text">hello i am ayush</h1>
+<pre> document.getElementById('text')</pre>
+
+
+
+ <h1>Que- Write the code to access element which is having tag as "h1"?</h1>
+ <p>ans-For target any Element by its tag  name in js we use-;</p>
+           <h1>hello duniya</h1>
+           <pre>document.getElementsByTagName('h1').</pre>
+           <p>it return html collection in array form.</p>  
+
+     
+
+<h1>Que- Write the code to access element which is having class as "box"?</h1>
+
+<pre>ans--For target any Element by its tag  name in js we use- </pre> 
+
+<p>document.getElementsByClassName('box').</p>         
+
+
+<h1>Que- Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</h1>
+  <p>for changing the heading hello to hello  world firstly we target heading by it tag name.like-</p>
+  <pre>document.querySelector('#changing').innerText='Hello World'</pre>
+
+<h1 id="changing"> Hello</h1>
+
+
+<h1>Que-Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</h1>
+<p>ans- <p id="changintext">Hello World</p>
+        <button onclick="replace()">Replace Text</button></p>
+        <h1>Que-What’s the difference between window vs document?</h1>
+        <p>The window is at a root/top level at the JavaScript object hierarchy. It is a global/root object in JavaScript and it is the root object of the Document object model(DOM); A document is an object inside the window object and we use a document object for manipulation inside the document</p>
+
+<h1>Que-Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</h1>
+        <h1 id="changecolor">hello how are you</h1>
+
+
+<h1>Que-Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</h1>
+<p>
+	<div class="flex_container"><div class="child"></div>
+                                     <div class="child"></div>
+                                      <div class="child"> </div>
+                                                        </div>
+
+<style type="text/css">.flex_container{display: flex;
+                justify-content: space-between;
+                flex-direction: row;}
+                .child{width: 200px;
+                         height: 200px;
+                        border: 1px solid black;}
+
+
+                        .clock_container{width: 200px;
+                                       height: 50px;}
+</style>
+
+
+                     <button onclick="direction()">Change Flex Direction</button>                                   
+</p>
+<h1> Que- Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second.</h1>
+ <p><div class="clockcontainer">
+ 	<div id="childclock"></div>
+               </div> 
+                     </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
