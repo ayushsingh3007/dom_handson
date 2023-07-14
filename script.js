@@ -52,7 +52,7 @@ document.querySelector('.line').style.visibility='visible'
 document.querySelector('.button2').style.visibility='visible'
 document.querySelector('.message').textContent="Start Gueesing"
 document.querySelector('.number_box').style.visibility='visible'
-document.querySelector(".chancenumber").textContent=`${Intialvalue}`
+document.querySelector(".chancenumber").textContent=chancesvalue=100
 document.querySelector('.assignscore').textContent=`${highscoring}`
 document.getElementById('input').value="";
   }
