@@ -1,61 +1,62 @@
-let randomnumber=random(100);
- let highscoring=0;  
-let chancesvalue=100;
-let Intialvalue=100;
-   function random(n){
-   	 return Math.floor(Math.random()*n)+1
-   }
-   function guessing(){
-   	let guessnumber=document.getElementById('input').value
 
-if(guessnumber>randomnumber){
-	document.querySelector('.message').textContent="Your guess is high"
-		document.querySelector(".chancenumber").textContent=--chancesvalue
+let highscoring = 0;
+let chancesvalue = 100;
+let Intialvalue = 100;
+let randomnumber;
 
+function random(n) {
+  return Math.floor((Math.random() * n) + 1);
 }
 
-
-
-else if(guessnumber<randomnumber){
-	document.querySelector('.message').textContent="Your guess is low"
-		document.querySelector(".chancenumber").textContent=--chancesvalue
-
+function generateRandomNumber() {
+  randomnumber = random(100);
 }
 
+function guessing() {
+  let guessnumber = document.getElementById('input').value;
 
-else{
-	document.querySelector('.message').textContent="Hurrah YOU WON"
-		document.querySelector(".chancenumber").textContent=--chancesvalue
-		document.querySelector('.main_container').style.background="violet"
-		document.querySelector('.assignscore').textContent=chancesvalue
-		document.querySelector('.number_box').style.visibility='hidden'
-		document.querySelector('.line').style.visibility='hidden'
-		document.querySelector('.button2').style.visibility='hidden'
-		document.querySelector('.hidden_number').style.visibility='visible '
-		document.querySelector('.hidden_number').textContent=`${guessnumber}`
-		document.querySelector('.messagechange').textContent="your guess is right"
-
-
+  if (guessnumber > randomnumber) {
+    document.querySelector('.message').textContent = "Your guess is high";
+    document.querySelector(".chancenumber").textContent = --chancesvalue;
+  } else if (guessnumber < randomnumber) {
+    document.querySelector('.message').textContent = "Your guess is low";
+    document.querySelector(".chancenumber").textContent = --chancesvalue;
+  } else {
+    document.querySelector('.message').textContent = "Hurrah YOU WON";
+    document.querySelector(".chancenumber").textContent = --chancesvalue;
+    document.querySelector('.main_container').style.background = "violet";
+    document.querySelector('.assignscore').textContent = chancesvalue;
+    document.querySelector('.number_box').style.visibility = 'hidden';
+    document.querySelector('.line').style.visibility = 'hidden';
+    document.querySelector('.button2').style.visibility = 'hidden';
+    document.querySelector('.hidden_number').style.visibility = 'visible';
+    document.querySelector('.hidden_number').textContent = `${guessnumber}`;
+    document.querySelector('.messagechange').textContent = "your guess is right";
+  }
 }
 
+function playagain() {
+  document.querySelector('.messagechange').textContent = "Guess My Number!";
+  document.querySelector('.main_container').style.background = "brown";
+  document.querySelector('.line').style.visibility = 'visible';
+  document.querySelector('.button2').style.visibility = 'visible';
+  document.querySelector('.message').textContent = "Start Guessing";
+  document.querySelector('.number_box').style.visibility = 'visible';
+  document.querySelector(".chancenumber").textContent = chancesvalue = 100;
+  document.querySelector('.assignscore').textContent = `${highscoring}`;
+  document.getElementById('input').value = "";
+  generateRandomNumber();
+}
 
-   }
-
-
+generateRandomNumber(); // Generate the initial random number
+console.log(randomnumber);
    // play again fuction changing 
 
 
-  function playagain(){
-document.querySelector('.messagechange').textContent="Guess My Number!"
-document.querySelector('.main_container').style.background="brown"
-document.querySelector('.line').style.visibility='visible'
-document.querySelector('.button2').style.visibility='visible'
-document.querySelector('.message').textContent="Start Gueesing"
-document.querySelector('.number_box').style.visibility='visible'
-document.querySelector(".chancenumber").textContent=chancesvalue=100
-document.querySelector('.assignscore').textContent=`${highscoring}`
-document.getElementById('input').value="";
-  }
+
+
+
+ 
 
 
 
@@ -66,7 +67,9 @@ document.getElementById('input').value="";
 
 
 
-// this is for index1 file 
+
+
+// This is for index1 file dom question and answer
 
 
 
@@ -102,3 +105,6 @@ a.setAttribute("id", "headings")
 
 
  
+
+
+
