@@ -43,7 +43,7 @@ function playagain() {
   document.querySelector('.message').textContent = "Start Guessing";
   document.querySelector('.number_box').style.visibility = 'visible';
   document.querySelector(".chancenumber").textContent = chancesvalue = 100;
-  document.querySelector('.assignscore').textContent = `${highscoring}`;
+  document.querySelector('.assignscore').textContent =`${guessnumber}`;
   document.getElementById('input').value = "";
   generateRandomNumber();
 }
