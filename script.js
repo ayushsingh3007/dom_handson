@@ -35,7 +35,6 @@ function guessing() {
   }
 }
 
-
 function playagain() {
   document.querySelector('.messagechange').textContent = "Guess My Number!";
   document.querySelector('.main_container').style.background = "brown";
@@ -47,11 +46,13 @@ function playagain() {
   document.querySelector('.assignscore').textContent = `${guessnumber}`;
   document.getElementById('input').value = "";
 
-  generateRandomNumber(); // Generate a new random number
+  generateRandomNumber(); 
 }
 
 generateRandomNumber(); // Generate the initial random number
 console.log(randomnumber);
+
+
 
 
 
