@@ -3,6 +3,7 @@ let highscoring = 0;
 let chancesvalue = 100;
 let Intialvalue = 100;
 let randomnumber;
+let guessnumber = null; // Declare guessnumber and initialize it to null
 
 function random(n) {
   return Math.floor((Math.random() * n) + 1);
@@ -13,7 +14,7 @@ function generateRandomNumber() {
 }
 
 function guessing() {
-  let guessnumber = document.getElementById('input').value;
+  guessnumber = document.getElementById('input').value;
 
   if (guessnumber > randomnumber) {
     document.querySelector('.message').textContent = "Your guess is high";
@@ -44,69 +45,15 @@ function playagain() {
   document.querySelector('.number_box').style.visibility = 'visible';
   document.querySelector(".chancenumber").textContent = chancesvalue = 100;
   document.querySelector('.assignscore').textContent = `${guessnumber}`;
-  document.getElementById('input').value = "";
+  document.getElementById('input').value = "";q
 
-  generateRandomNumber(); 
+  generateRandomNumber(); // Generate a new random number
+
+  // You need to update the displayed random number in the DOM if you wish to show it to the user
+  // For example, if you have an element with id 'randomNumberDisplay' to show the random number, you can do this:
+  // document.getElementById('randomNumberDisplay').textContent = randomnumber;
 }
 
 generateRandomNumber(); // Generate the initial random number
 console.log(randomnumber);
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-// This is for index1 file dom question and answer
-
-
-
-
-
-document.querySelector('#changing').innerText='Hello World'
-
-function replace(){
- document.getElementById('changintext').innerText='Welcome to  Elevation Academy'
-}
-function direction(){
-	let a=document.querySelector('.flex_container');
-   if(a.style.flexDirection==='row'){
-   	a.style.flexDirection='column'
-   }
-   else{
-   	a.style.flexDirection='row'
-   }
-}
-  
-
-function clockcontainer(){
-	let a= new Date().toLocaleTimeString();
-	document.getElementById('childclock').innerHTML=a
-}
-setInterval(clockcontainer,1000)
-
-
-let a=document.getElementById('changecolor')
-a.style.color="red"
-a.setAttribute("id", "headings")
-
-
-
- 
-
-
-
+	
