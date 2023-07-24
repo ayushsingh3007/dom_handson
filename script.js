@@ -44,7 +44,8 @@ function playagain() {
   document.querySelector('.message').textContent = "Start Guessing";
   document.querySelector('.number_box').style.visibility = 'visible';
   document.querySelector(".chancenumber").textContent = chancesvalue = 100;
-  document.querySelector('.assignscore').textContent = `${chancesvalue}`; // Clear the previous guess number
+  document.querySelector('.assignscore').textContent = `High Score: ${highscoring}`;
+  }
   document.getElementById('input').value = "";
 
   generateRandomNumber(); // Generate a new random number
