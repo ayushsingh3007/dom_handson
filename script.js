@@ -1,4 +1,3 @@
-
 let highscoring = 0;
 let chancesvalue = 100;
 let Intialvalue = 100;
@@ -33,6 +32,12 @@ function guessing() {
     document.querySelector('.hidden_number').style.visibility = 'visible';
     document.querySelector('.hidden_number').textContent = `${guessnumber}`;
     document.querySelector('.messagechange').textContent = "your guess is right";
+
+    // Update the high score if the current score is higher than the previous high score
+    if (chancesvalue > highscoring) {
+      highscoring = chancesvalue;
+      document.querySelector('.assignscore').textContent = `High Score: ${highscoring}`;
+    }
   }
 }
 
@@ -44,18 +49,13 @@ function playagain() {
   document.querySelector('.message').textContent = "Start Guessing";
   document.querySelector('.number_box').style.visibility = 'visible';
   document.querySelector(".chancenumber").textContent = chancesvalue = 100;
-  document.querySelector('.assignscore').textContent =`High Score: ${chancesvalue}`;
-
-  }
+  document.querySelector('.assignscore').textContent = `High Score: ${highscoring}`;
   document.getElementById('input').value = "";
 
   generateRandomNumber(); // Generate a new random number
-
-  // You need to update the displayed random number in the DOM if you wish to show it to the user
-  // For example, if you have an element with id 'randomNumberDisplay' to show the random number, you can do this:
-  // document.getElementById('randomNumberDisplay').textContent = randomnumber;
+  console.log(randomnumber); // Log the new random number
 }
 
 generateRandomNumber(); // Generate the initial random number
-console.log(randomnumber);
-	
+console.log(randomnumber); // Log the initial random number
+			   
