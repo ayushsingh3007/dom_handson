@@ -35,7 +35,6 @@ function guessing() {
   }
 }
 
-// ... (existing code)
 
 function playagain() {
   document.querySelector('.messagechange').textContent = "Guess My Number!";
@@ -47,12 +46,12 @@ function playagain() {
   document.querySelector(".chancenumber").textContent = chancesvalue = 100;
   document.querySelector('.assignscore').textContent = `${guessnumber}`;
   document.getElementById('input').value = "";
+
   generateRandomNumber(); // Generate a new random number
 }
 
 generateRandomNumber(); // Generate the initial random number
 console.log(randomnumber);
-
 
 
 
